@@ -18,20 +18,13 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    { name: "Features", url: "#features" },
+    { name: "Preview", url: "#preview" },
+    { name: "Plans", url: "#plans" },
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="2xl">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -53,17 +46,17 @@ export default function App() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/#features">
+          <Link className="text-purple-500" href="#features">
             Features
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#preview">
+          <Link className="text-purple-500" href="#preview">
             Preview
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#plans">
+          <Link className="text-purple-500" href="#plans">
             Plans
           </Link>
         </NavbarItem>
@@ -73,18 +66,12 @@ export default function App() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
+              color={"foreground"}
               className="w-full"
-              href="#"
+              href={item.url}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}

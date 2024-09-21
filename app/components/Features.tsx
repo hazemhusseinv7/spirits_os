@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+
+import { ScrollParallax } from "react-just-parallax";
 
 const Features = () => {
   return (
@@ -41,12 +45,14 @@ const Features = () => {
           </div>
         </div>
         <div className="flex justify-center order-3 lg:order-2 mt-10 lg:mt-0">
-          <Image
-            src="/features/mobile.svg"
-            width={400}
-            height={100}
-            alt="Chatbot Mobile"
-          />
+          <ScrollParallax>
+            <Image
+              src="/features/mobile.svg"
+              width={400}
+              height={100}
+              alt="Chatbot Mobile"
+            />
+          </ScrollParallax>
         </div>
         <div className="flex flex-col gap-4 order-2 lg:order-3">
           <div className="group border-[3px] border-slate-800 hover:border-slate-700 hover:text-slate-100 duration-400 rounded-xl p-5 bg-gray-900 hover:bg-slate-800">

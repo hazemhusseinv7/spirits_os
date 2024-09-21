@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+
+import { ScrollParallax } from "react-just-parallax";
 
 const Hero = () => {
   return (
@@ -13,34 +16,40 @@ const Hero = () => {
             </span>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-            <Link href="#">
-              <Image
-                className="w-72 h-auto md:h-20 md:w-auto"
-                src="/play-store-badge.svg"
-                width={200}
-                height={100}
-                alt="Play store badge"
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                className="w-72 h-auto md:h-20 md:w-auto"
-                src="/app-store-badge.svg"
-                width={200}
-                height={100}
-                alt="App store badge"
-              />
-            </Link>
+            <ScrollParallax>
+              <Link href="#">
+                <Image
+                  className="w-72 h-auto md:h-20 md:w-auto"
+                  src="/play-store-badge.svg"
+                  width={200}
+                  height={100}
+                  alt="Play store badge"
+                />
+              </Link>
+            </ScrollParallax>
+            <ScrollParallax strength={0.2}>
+              <Link href="#">
+                <Image
+                  className="w-72 h-auto md:h-20 md:w-auto"
+                  src="/app-store-badge.svg"
+                  width={200}
+                  height={100}
+                  alt="App store badge"
+                />
+              </Link>
+            </ScrollParallax>
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <Image
-            className="lg:order-1"
-            src="/chatbot-mobile.png"
-            width={500}
-            height={100}
-            alt="Chatbot"
-          ></Image>
+          <ScrollParallax>
+            <Image
+              className="lg:order-1"
+              src="/chatbot-mobile.png"
+              width={500}
+              height={100}
+              alt="Chatbot"
+            ></Image>
+          </ScrollParallax>
         </div>
       </div>
       <div className="flex font-thin justify-center">
