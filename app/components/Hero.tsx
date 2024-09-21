@@ -51,7 +51,7 @@ const Hero = () => {
           <ScrollParallax strength={0.04}>
             <div className="flex justify-center lg:justify-start items-center">
               <Image
-                src="/chatbot-mobile.png"
+                src="/hero/chatbot-mobile.png"
                 width={500}
                 height={100}
                 alt="Chatbot"
