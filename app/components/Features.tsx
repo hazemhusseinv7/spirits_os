@@ -13,7 +13,7 @@ const Features = () => {
         </h2>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className="flex flex-col gap-4 order-1 lg:order-1">
+        <div className="flex flex-col gap-4 order-2 lg:order-1">
           <div className="group flex-1 border-[3px] border-slate-800 hover:border-slate-700 hover:text-slate-100 duration-400 rounded-xl p-5 overflow-hidden pb-72 relative bg-gray-900 hover:bg-slate-800">
             <div className="relative z-10">
               <h3 className="font-bold text-2xl lg:4xl text-slate-300 group-hover:text-slate-100 duration-400">
@@ -45,7 +45,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className="order-3 lg:order-2 ">
+        <div className="order-1 lg:order-2">
           <ScrollParallax>
             <div className="flex justify-center items-center mt-10 lg:mt-0">
               <Image

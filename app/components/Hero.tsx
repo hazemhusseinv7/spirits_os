@@ -16,39 +16,94 @@ const Hero = () => {
               Your own private social network with AI virtual Spirits
             </span>
           </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-            <ScrollParallax strength={0.05}>
-              <Link href="#">
-                <Image
-                  className="w-72 h-auto md:h-20 md:w-auto"
-                  src="/play-store-badge.svg"
-                  width={200}
-                  height={100}
-                  alt="Play store badge"
-                />
-              </Link>
-            </ScrollParallax>
-            <ScrollParallax strength={0.1}>
-              <Link href="#">
-                <Image
-                  className="w-72 h-auto md:h-20 md:w-auto"
-                  src="/app-store-badge.svg"
-                  width={200}
-                  height={100}
-                  alt="App store badge"
-                />
-              </Link>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 relative">
+            <Link href="#!" className="z-30" aria-label="Play store">
+              <Image
+                className="w-72 h-auto md:h-20 md:w-auto"
+                src="/hero/play-store-badge.svg"
+                width={200}
+                height={100}
+                alt="Play store badge"
+              />
+            </Link>
+
+            <Link href="#!" className="z-30" aria-label="App store">
+              <Image
+                className="w-72 h-auto md:h-20 md:w-auto"
+                src="/hero/app-store-badge.svg"
+                width={200}
+                height={100}
+                alt="App store badge"
+              />
+            </Link>
+            <ScrollParallax isAbsolutelyPositioned strength={0.3}>
+              <Image
+                className="w-24 absolute top-[170px] right-[20px] rotate-90"
+                src="/particles/particle-1.svg"
+                width={500}
+                height={100}
+                alt="Particles"
+              ></Image>
             </ScrollParallax>
           </div>
         </div>
-        <div className="flex justify-center items-center">
-          <ScrollParallax strength={0.1}>
+        <div className="lg:order-1 relative flex-1">
+          <ScrollParallax strength={0.04}>
+            <div className="flex justify-center lg:justify-start items-center">
+              <Image
+                src="/chatbot-mobile.png"
+                width={500}
+                height={100}
+                alt="Chatbot"
+                priority
+              ></Image>
+            </div>
+          </ScrollParallax>
+          <ScrollParallax isAbsolutelyPositioned strength={0.4}>
             <Image
-              className="lg:order-1"
-              src="/chatbot-mobile.png"
+              className="w-20 absolute top-0 right-[20px] hidden lg:block"
+              src="/particles/particle-1.svg"
               width={500}
               height={100}
-              alt="Chatbot"
+              alt="Particles"
+            ></Image>
+          </ScrollParallax>
+          <ScrollParallax isAbsolutelyPositioned strength={0.3}>
+            <Image
+              className="w-20 absolute top-[200px] left-[40px]"
+              src="/particles/particle-2.svg"
+              width={500}
+              height={100}
+              alt="Particles"
+            ></Image>
+          </ScrollParallax>
+          <ScrollParallax isAbsolutelyPositioned>
+            <Image
+              className="w-10 lg:w-20 absolute bottom-[20px] right-[180px]"
+              src="/particles/particle-3.svg"
+              width={500}
+              height={100}
+              alt="Particles"
+            ></Image>
+          </ScrollParallax>
+
+          <ScrollParallax isAbsolutelyPositioned strength={0.3}>
+            <Image
+              className="w-10 lg:w-20 absolute bottom-[180px] -right-[10px] rotate-90"
+              src="/particles/particle-4.svg"
+              width={500}
+              height={100}
+              alt="Particles"
+            ></Image>
+          </ScrollParallax>
+
+          <ScrollParallax isAbsolutelyPositioned strength={0.5}>
+            <Image
+              className="w-40 absolute bottom-0 -left-[180px] rotate-45 hidden lg:block"
+              src="/particles/particle-1.svg"
+              width={500}
+              height={100}
+              alt="Particles"
             ></Image>
           </ScrollParallax>
         </div>

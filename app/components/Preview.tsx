@@ -12,8 +12,8 @@ const Preview = () => {
       </div>
       <div className="flex justify-center">
         <Image
-          className="w-[900px]"
-          src="/preview.png"
+          className="w-[975px]"
+          src="/preview/preview.png"
           width={975}
           height={100}
           alt="Mobile app preview"
