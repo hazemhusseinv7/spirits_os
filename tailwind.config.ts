@@ -13,9 +13,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "main-color-1": "#0AC1EB",
-        "main-color-2": "#5488F4",
-        "main-color-3": "#8B22FC",
+        "main-color-1": "var(--main-color-1)",
+        "main-color-2": "var(--main-color-2)",
+        "main-color-3": "var(--main-color-3)",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

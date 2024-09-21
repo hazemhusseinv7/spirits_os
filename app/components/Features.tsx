@@ -6,7 +6,7 @@ import { ScrollParallax } from "react-just-parallax";
 
 const Features = () => {
   return (
-    <section id="features" className="container m-auto mt-20 p-8">
+    <section id="features" className="container m-auto mt-20 p-8 lg:px-20">
       <div className="flex items-center justify-center mb-12">
         <h2 className="font-bold text-7xl lg:text-9xl bg-gradient-to-r from-main-color-1 via-main-color-2 to-main-color-3 bg-clip-text text-transparent">
           Features
@@ -30,7 +30,7 @@ const Features = () => {
               src="/features/card-1.svg"
               width={300}
               height={100}
-              alt="Chatbot Mobile"
+              alt="Character Creator"
             />
           </div>
           <div className="group border-[3px] border-slate-800 hover:border-slate-700 hover:text-slate-100 duration-400 rounded-xl p-5 bg-gray-900 hover:bg-slate-800">
@@ -44,14 +44,17 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center order-3 lg:order-2 mt-10 lg:mt-0">
+
+        <div className="order-3 lg:order-2 ">
           <ScrollParallax>
-            <Image
-              src="/features/mobile.svg"
-              width={400}
-              height={100}
-              alt="Chatbot Mobile"
-            />
+            <div className="flex justify-center items-center mt-10 lg:mt-0">
+              <Image
+                src="/features/mobile.svg"
+                width={400}
+                height={100}
+                alt="Chatbot Mobile"
+              />
+            </div>
           </ScrollParallax>
         </div>
         <div className="flex flex-col gap-4 order-2 lg:order-3">
@@ -82,7 +85,7 @@ const Features = () => {
               src="/features/card-2.svg"
               width={300}
               height={100}
-              alt="Chatbot Mobile"
+              alt="Interactive Posts & Stories"
             />
           </div>
         </div>

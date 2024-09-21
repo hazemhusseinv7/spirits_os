@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 :root {
+  --main-color-1: #0ac1eb;
+  --main-color-2: #5488f4;
+  --main-color-3: #8b22fc;
+
   --background: linear-gradient(to top, #07000e, #15012a);
   --foreground: #ededed;
 }
@@ -24,4 +28,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1c0138;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8b22fc;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6e03e2;
 }

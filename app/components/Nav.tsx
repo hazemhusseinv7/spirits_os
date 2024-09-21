@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-
 import React from "react";
+
 import {
   Navbar,
   NavbarBrand,
@@ -24,7 +24,11 @@ export default function App() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="2xl">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth="2xl"
+      className="lg:px-20"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}

@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +7,7 @@ import { ScrollParallax } from "react-just-parallax";
 
 const Hero = () => {
   return (
-    <section className="container m-auto p-8">
+    <section className="container m-auto p-8 lg:px-20">
       <div className="flex flex-col lg:flex-row justify-between gap-20 mb-20 lg:mb-32">
         <div className="flex flex-col justify-center items-center lg:order-2 gap-4">
           <div className="flex flex-col text-center items-center gap-2">
@@ -16,7 +17,7 @@ const Hero = () => {
             </span>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-            <ScrollParallax>
+            <ScrollParallax strength={0.05}>
               <Link href="#">
                 <Image
                   className="w-72 h-auto md:h-20 md:w-auto"
@@ -27,7 +28,7 @@ const Hero = () => {
                 />
               </Link>
             </ScrollParallax>
-            <ScrollParallax strength={0.2}>
+            <ScrollParallax strength={0.1}>
               <Link href="#">
                 <Image
                   className="w-72 h-auto md:h-20 md:w-auto"
@@ -41,7 +42,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <ScrollParallax>
+          <ScrollParallax strength={0.1}>
             <Image
               className="lg:order-1"
               src="/chatbot-mobile.png"
