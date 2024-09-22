@@ -29,24 +29,22 @@ export default function App() {
       maxWidth="2xl"
       className="lg:px-20"
     >
-      <NavbarContent>
-        <NavbarBrand>
-          <Link href="/">
-            <Image
-              className="w-30 h-auto"
-              src="/logo/logo-text-white.svg"
-              width={150}
-              height={150}
-              alt="SpiritsOS Logo"
-              priority
-            />
-          </Link>
-        </NavbarBrand>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-      </NavbarContent>
+      <NavbarBrand>
+        <Link href="/">
+          <Image
+            className="w-30 h-auto"
+            src="/logo/logo-text-white.svg"
+            width={150}
+            height={150}
+            alt="SpiritsOS Logo"
+            priority
+          />
+        </Link>
+      </NavbarBrand>
+      <NavbarMenuToggle
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        className="sm:hidden"
+      />
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>

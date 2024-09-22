@@ -46,7 +46,7 @@ const Features = () => {
         </div>
 
         <div className="order-1 lg:order-2">
-          <ScrollParallax>
+          <ScrollParallax strength={0.08}>
             <div className="flex justify-center items-center mt-10 lg:mt-0">
               <Image
                 src="/features/mobile.svg"
