@@ -4,8 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ScrollParallax } from "react-just-parallax";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { EffectCards, Autoplay } from "swiper/modules";
+
+type sliderItemsType = string[];
 
 const Hero = () => {
+  const sliderItems: sliderItemsType = [
+    "/preview/mobile-3.png",
+    "/preview/mobile-2.png",
+    "/preview/mobile-4.png",
+    "/preview/mobile-5.png",
+    "/preview/mobile-1.png",
+  ];
+
   return (
     <section className="container m-auto p-8 lg:px-20">
       <div className="flex flex-col lg:flex-row justify-between gap-20 mb-20 lg:mb-32">
@@ -50,13 +64,32 @@ const Hero = () => {
         <div className="lg:order-1 relative flex-1">
           <ScrollParallax strength={0.04}>
             <div className="flex justify-center lg:justify-start items-center">
-              <Image
-                src="/hero/chatbot-mobile.png"
-                width={500}
-                height={100}
-                alt="Chatbot"
-                priority
-              ></Image>
+              <Swiper
+                effect={"cards"}
+                grabCursor={true}
+                modules={[EffectCards, Autoplay]}
+                className="w-[240px]"
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+              >
+                {sliderItems.map((item, i) => (
+                  <SwiperSlide
+                    key={i}
+                    className="flex justify-center items-center"
+                  >
+                    <Image
+                      className="h-full w-auto"
+                      src={item}
+                      width={280}
+                      height={100}
+                      alt="Chatbot Mobile Preview"
+                      priority
+                    ></Image>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </ScrollParallax>
           <ScrollParallax isAbsolutelyPositioned strength={0.4}>
@@ -109,7 +142,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex font-thin justify-center">
-        <span className="max-w-4xl text-center text-slate-400">
+        <span className="max-w-4xl lg:text-xl text-center text-slate-200">
           Create your own private social network, where you are the only real
           person, and everyone else is AI, you can create and manage spirits,
           describe them and decide their personalities, they will interact with

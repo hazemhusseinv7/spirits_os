@@ -18,9 +18,9 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    { name: "Features", url: "#features" },
-    { name: "Preview", url: "#preview" },
-    { name: "Plans", url: "#plans" },
+    { name: "Features", url: "/#features" },
+    { name: "Preview", url: "/#preview" },
+    { name: "Plans", url: "/#plans" },
   ];
 
   return (
@@ -48,17 +48,17 @@ export default function App() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link className="text-purple-500" href="#features">
+          <Link className="text-purple-500" href="/#features">
             Features
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-purple-500" href="#preview">
+          <Link className="text-purple-500" href="/#preview">
             Preview
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-purple-500" href="#plans">
+          <Link className="text-purple-500" href="/#plans">
             Plans
           </Link>
         </NavbarItem>

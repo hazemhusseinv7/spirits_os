@@ -8,7 +8,7 @@ const Preview = () => {
   return (
     <section id="preview" className="container m-auto mt-20 p-8 lg:px-20">
       <div className="flex items-center justify-center mb-12">
-        <h2 className="font-bold text-7xl lg:text-9xl leading-[1.2] lg:leading-[1.4] bg-gradient-to-r from-main-color-1 via-main-color-2 to-main-color-3 bg-clip-text text-transparent">
+        <h2 className="font-bold text-7xl lg:text-9xl bg-gradient-to-r from-main-color-1 via-main-color-2 to-main-color-3 bg-clip-text text-transparent leading-[1.2] lg:leading-[1.4]">
           Preview
         </h2>
       </div>
@@ -18,10 +18,9 @@ const Preview = () => {
             <Image
               className="w-full"
               src="/preview/mobile-1.png"
-              width={150}
-              height={300}
+              width={350}
+              height={540}
               alt="Mobile app preview"
-              unoptimized
             />
           </ScrollParallax>
         </div>
@@ -30,10 +29,9 @@ const Preview = () => {
             <Image
               className="w-[90%]"
               src="/preview/mobile-2.png"
-              width={150}
-              height={300}
+              width={350}
+              height={540}
               alt="Mobile app preview"
-              unoptimized
             />
           </ScrollParallax>
         </div>
@@ -41,12 +39,11 @@ const Preview = () => {
         <div className="flex justify-center items-center">
           <ScrollParallax strength={0.01}>
             <Image
-              className="w-[95%]"
+              className="w-[[95%]]"
               src="/preview/mobile-3.png"
-              width={150}
-              height={300}
+              width={540}
+              height={540}
               alt="Mobile app preview"
-              unoptimized
             />
           </ScrollParallax>
         </div>
@@ -56,10 +53,9 @@ const Preview = () => {
             <Image
               className="w-[90%]"
               src="/preview/mobile-4.png"
-              width={150}
-              height={300}
+              width={350}
+              height={540}
               alt="Mobile app preview"
-              unoptimized
             />
           </ScrollParallax>
         </div>
@@ -68,10 +64,9 @@ const Preview = () => {
             <Image
               className="w-full"
               src="/preview/mobile-5.png"
-              width={150}
-              height={300}
+              width={350}
+              height={1249}
               alt="Mobile app preview"
-              unoptimized
             />
           </ScrollParallax>
         </div>
